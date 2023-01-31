@@ -1,0 +1,38 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books Collection</h1>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <%= render book %>
+    <p>
+      <%= link_to "Show this book", book %>
+    </p>
+  <% end %>
+</div>
+ <table class="listing" summary="Task list" style="width: 100%;">
+    <tr class="header">
+      <th>#</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+    <% @books.each do |task| %>
+    <tr>
+      <%# <td><%= task.position %></td> %>
+      <%# <td><%= task.name %></td> %>
+      <%# <td><%= task.author %></td> %>
+      <%# <td><%= task.price %></td> %>
+      <%# <td><%= task.date %></td> %>
+      <%# <td class="actions"> %>
+        <%# <%= link_to("Show details", book_path(task), class: 'action show') %> %>
+        <%# <%= link_to("Update a Book", edit_book_path(task), class: 'action edit') %> %>
+        <%# <%= link_to("Delete a Book", delete_booko_path(task), class: 'action delete') %> %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+<%= link_to "New book", new_book_path %>
